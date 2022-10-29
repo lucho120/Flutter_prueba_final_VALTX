@@ -1,4 +1,8 @@
+import 'package:app_prueba_final_valtx/app/routes/app_routes.dart';
+import 'package:app_prueba_final_valtx/app/routes/app_views.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:app_prueba_final_valtx/app/ui/views/home/home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +14,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Text('Flutter Demo Home Page'),
+      initialRoute: AppRoutes.HOME,
+      getPages: AppViews.views,
     );
   }
 }
