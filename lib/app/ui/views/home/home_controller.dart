@@ -1,3 +1,4 @@
+import 'package:app_prueba_final_valtx/app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
@@ -25,5 +26,9 @@ class HomeController extends GetxController {
   //Functions
   void changeCategory(int index) {
     indexSelectCategory.value = index;
+  }
+
+  void viewDetailFood() {
+    Get.toNamed(AppRoutes.DETAIL_FOOD);
   }
 }
