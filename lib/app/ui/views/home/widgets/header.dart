@@ -61,13 +61,12 @@ class Header extends StatelessWidget {
                     width: 60.0,
                     height: 60.0,
                     child: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                          'https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?w=996&t=st=1667063217~exp=1667063817~hmac=2f3fd346fdb490487ccfd67787a6b4765e819f259284b66118a8c7e064c0bf30'),
-                    ),
+                        backgroundImage:
+                            AssetImage('assets/images/avatar.jpg')),
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 40.0, left: 10.0),
+                  margin: const EdgeInsets.only(top: 10.0, left: 10.0),
                   padding: const EdgeInsets.all(10.0),
                   child: const Text(
                     "Lookin' for something special?",
@@ -85,9 +84,9 @@ class Header extends StatelessWidget {
                     borderRadius: BorderRadius.circular(32),
                   ),
                   margin: const EdgeInsets.symmetric(
-                      horizontal: 15.0, vertical: 20.0),
+                      horizontal: 10.0, vertical: 15.0),
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 30.0, vertical: 10.0),
+                      horizontal: 30.0, vertical: 5.0),
                   child: const TextField(
                     decoration: InputDecoration(
                       filled: true,

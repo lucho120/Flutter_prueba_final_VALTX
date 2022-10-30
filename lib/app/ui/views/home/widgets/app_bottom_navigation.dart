@@ -10,39 +10,42 @@ class AppBottomNavigationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      elevation: 0.0,
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-      iconSize: 30.0,
-      type: BottomNavigationBarType.fixed,
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(CustomHome.home_icon_227229, color: Colors.black),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            CustomLayout.layers_icon_icons_com_63710,
-            color: Colors.black,
+    return Container(
+      height: 70.0,
+      child: BottomNavigationBar(
+        elevation: 0.0,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        iconSize: 30.0,
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(CustomHome.home_icon_227229, color: Colors.black),
+            label: 'Home',
           ),
-          label: 'layouts',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            CustomShopping.shopping_bag_icon_icons_com_63448,
-            color: Colors.black,
+          BottomNavigationBarItem(
+            icon: Icon(
+              CustomLayout.layers_icon_icons_com_63710,
+              color: Colors.black,
+            ),
+            label: 'layouts',
           ),
-          label: 'Shopping',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            CustomUser.profile_icon_183761,
-            color: Colors.black,
+          BottomNavigationBarItem(
+            icon: Icon(
+              CustomShopping.shopping_bag_icon_icons_com_63448,
+              color: Colors.black,
+            ),
+            label: 'Shopping',
           ),
-          label: 'Profile',
-        ),
-      ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              CustomUser.profile_icon_183761,
+              color: Colors.black,
+            ),
+            label: 'Profile',
+          ),
+        ],
+      ),
     );
   }
 }

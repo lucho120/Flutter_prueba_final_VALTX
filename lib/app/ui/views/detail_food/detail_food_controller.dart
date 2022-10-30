@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+class DetailFoodController extends GetxController {
   @override
   void onInit() {
     // TODO: implement onInit
@@ -17,13 +17,5 @@ class HomeController extends GetxController {
   void onClose() {
     // TODO: implement onClose
     super.onClose();
-  }
-
-  //Variables
-  RxInt indexSelectCategory = RxInt(0);
-
-  //Functions
-  void changeCategory(int index) {
-    indexSelectCategory.value = index;
   }
 }
