@@ -26,7 +26,8 @@ class _CardsFoodState extends State<CardsFood> {
   void _scrollToIndex(index) {
     //función que se desplaza a un card food seleccionado
     _scrollController.animateTo(_width * index,
-        duration: const Duration(seconds: 2), curve: Curves.fastOutSlowIn);
+        duration: const Duration(seconds: 2),
+        curve: Curves.fastLinearToSlowEaseIn);
   }
 
   @override
@@ -94,24 +95,28 @@ class _CardsFoodState extends State<CardsFood> {
             scrollDirection: Axis.horizontal,
             children: [
               CardFood(
+                  idCategory: 1,
                   urlImage:
                       'https://st.depositphotos.com/1042799/1706/i/600/depositphotos_17064571-stock-photo-sushi-set.jpg',
                   cookingTime: '30-45 min',
                   titleCard: 'eel & leaf',
                   descriptionCard: '3601 Indian Way Crk'),
               CardFood(
+                  idCategory: 2,
                   urlImage:
                       'https://st4.depositphotos.com/15827116/31241/i/600/depositphotos_312414474-stock-photo-top-view-tasty-spicy-seafood.jpg',
                   cookingTime: '30-45 min',
                   titleCard: 'Noodles & Ramen',
                   descriptionCard: '812 Avenue, 153673'),
               CardFood(
+                  idCategory: 3,
                   urlImage:
                       'https://st2.depositphotos.com/1326558/7163/i/600/depositphotos_71632883-stock-photo-mexican-tacos-with-meat-vegetables.jpg',
                   cookingTime: '10-20 min',
                   titleCard: 'Tacos',
                   descriptionCard: '801 Ciudad de México'),
               CardFood(
+                  idCategory: 4,
                   urlImage:
                       'https://st4.depositphotos.com/1020618/23910/i/600/depositphotos_239107218-stock-photo-tasty-burger-with-french-fries.jpg',
                   cookingTime: '10-15 min',
@@ -119,12 +124,14 @@ class _CardsFoodState extends State<CardsFood> {
                   descriptionCard:
                       'Av. La Mar 1328 Miraflores, Lima 15084 Perú'),
               CardFood(
+                  idCategory: 5,
                   urlImage:
                       'https://st2.depositphotos.com/1692343/5636/i/600/depositphotos_56360413-stock-photo-hot-homemade-pepperoni-pizza.jpg',
                   cookingTime: '20-30 min',
                   titleCard: 'Pizzas',
                   descriptionCard: 'Av. La Marina 1598, Lima 15084 Perú'),
               CardFood(
+                  idCategory: 6,
                   urlImage:
                       'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
                   cookingTime: '20-30 min',
@@ -188,7 +195,8 @@ class _CardsFoodState extends State<CardsFood> {
   }
 
   Widget CardFood(
-      {required String urlImage,
+      {required int idCategory,
+      required String urlImage,
       required String cookingTime,
       required String titleCard,
       required String descriptionCard}) {
@@ -199,7 +207,8 @@ class _CardsFoodState extends State<CardsFood> {
               children: [
                 GestureDetector(
                   onTap: (() {
-                    controller.viewDetailFood();
+                    controller.viewDetailFood(idCategory, urlImage, cookingTime,
+                        titleCard, descriptionCard);
                   }),
                   child: Card(
                       shape: RoundedRectangleBorder(

@@ -1,5 +1,5 @@
-import 'package:app_prueba_final_valtx/app/routes/app_routes.dart';
 import 'package:get/get.dart';
+import 'package:app_prueba_final_valtx/app/routes/app_routes.dart';
 
 class HomeController extends GetxController {
   @override
@@ -28,7 +28,22 @@ class HomeController extends GetxController {
     indexSelectCategory.value = index;
   }
 
-  void viewDetailFood() {
-    Get.toNamed(AppRoutes.DETAIL_FOOD);
+  void viewDetailFood(int idCategory, String urlImage, String cookingTime,
+      String titleCard, String descriptionCard) async {
+    try {
+      // creamos nuestro arreglo con la información de la card seleccioanda
+      final cardFood = {
+        'idCategory': idCategory,
+        'urlImage': urlImage,
+        'cookingTime': cookingTime,
+        'titleCard': titleCard,
+        'descriptionCard': descriptionCard
+      };
+
+      // nos dirigimos a la vista de detail food
+      Get.toNamed(AppRoutes.DETAIL_FOOD, arguments: cardFood);
+    } catch (error) {
+      print("Error =>$error");
+    }
   }
 }

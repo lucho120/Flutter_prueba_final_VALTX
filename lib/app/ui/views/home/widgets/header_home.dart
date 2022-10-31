@@ -3,8 +3,8 @@ import 'package:app_prueba_final_valtx/app/ui/icons/custom_search_icons.dart';
 import 'package:app_prueba_final_valtx/core/theme/app_color.dart';
 import 'package:flutter/material.dart';
 
-class Header extends StatelessWidget {
-  const Header({Key? key}) : super(key: key);
+class HeaderHome extends StatelessWidget {
+  const HeaderHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
