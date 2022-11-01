@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'package:app_prueba_final_valtx/app/ui/views/detail_food/detail_food_controller.dart';
 import 'package:app_prueba_final_valtx/core/theme/app_color.dart';
 
@@ -65,7 +66,7 @@ class DraggableScrollableFood extends StatelessWidget {
                                         padding:
                                             const EdgeInsets.only(right: 15.0),
                                         child: Text(
-                                          controller.cookingTime.value,
+                                          '${controller.cookingTime}utes',
                                           style: const TextStyle(
                                               fontWeight: FontWeight.w700,
                                               color: Color.fromRGBO(
@@ -157,6 +158,58 @@ class DraggableScrollableFood extends StatelessWidget {
                                               fontWeight: FontWeight.w500),
                                         ),
                                       )),
+                                  Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 5.0, horizontal: 5.0),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(10.0),
+                                        child: Text(
+                                          'Experemental',
+                                          style: TextStyle(
+                                              color: backgroundColor,
+                                              fontSize: 15.0,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                      )),
+                                  Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 5.0, horizontal: 5.0),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(10.0),
+                                        child: Text(
+                                          'Speicality',
+                                          style: TextStyle(
+                                              color: backgroundColor,
+                                              fontSize: 15.0,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                      )),
+                                  Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 5.0, horizontal: 5.0),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(10.0),
+                                        child: Text(
+                                          'Experemental',
+                                          style: TextStyle(
+                                              color: backgroundColor,
+                                              fontSize: 15.0,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                      )),
+                                  Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 5.0, horizontal: 5.0),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(10.0),
+                                        child: Text(
+                                          'Speicality',
+                                          style: TextStyle(
+                                              color: backgroundColor,
+                                              fontSize: 15.0,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                      )),
                                 ],
                               ),
                             ),
@@ -172,75 +225,69 @@ class DraggableScrollableFood extends StatelessWidget {
                           mainAxisSpacing: 10.0,
                           crossAxisCount: 2,
                           children: [
-                            CardFood(
+                            CardFood(context,
                                 idCategory: 1,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
+                                    'https://st3.depositphotos.com/13349494/17505/i/600/depositphotos_175058098-stock-photo-pasta.jpg',
                                 descriptionCard:
                                     'Classic ramen with chicken and egg',
                                 price: '\$4,99'),
-                            CardFood(
-                                idCategory: 1,
+                            CardFood(context,
+                                idCategory: 2,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
+                                    'https://st.depositphotos.com/1507812/1884/i/600/depositphotos_18843809-stock-photo-italian-pasta-with-tomato-sauce.jpg',
                                 descriptionCard:
-                                    'Classic ramen with chicken and egg',
+                                    'italian pasta with tomato sauce',
                                 price: '\$4,99'),
-                            CardFood(
-                                idCategory: 1,
+                            CardFood(context,
+                                idCategory: 3,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
-                                descriptionCard:
-                                    'Classic ramen with chicken and egg',
+                                    'https://st.depositphotos.com/1003814/4626/i/600/depositphotos_46267763-stock-photo-fried-chicken-fillets.jpg',
+                                descriptionCard: 'fried chicken fillets',
                                 price: '\$4,99'),
-                            CardFood(
-                                idCategory: 1,
+                            CardFood(context,
+                                idCategory: 4,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
+                                    'https://static8.depositphotos.com/1005629/806/i/600/depositphotos_8068134-stock-photo-pasta-with-olives-and-parsley.jpg',
                                 descriptionCard:
-                                    'Classic ramen with chicken and egg',
+                                    'pasta with olives and parsley',
                                 price: '\$4,99'),
-                            CardFood(
-                                idCategory: 1,
+                            CardFood(context,
+                                idCategory: 5,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
-                                descriptionCard:
-                                    'Classic ramen with chicken and egg',
+                                    'https://st.depositphotos.com/1020618/1877/i/600/depositphotos_18772725-stock-photo-grilled-bbq-steaks.jpg',
+                                descriptionCard: 'grilled bbq steaks',
                                 price: '\$4,99'),
-                            CardFood(
-                                idCategory: 1,
+                            CardFood(context,
+                                idCategory: 6,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
-                                descriptionCard:
-                                    'Classic ramen with chicken and egg',
+                                    'https://st.depositphotos.com/1491329/2998/i/600/depositphotos_29983711-stock-photo-grilled-beef-steak-meat-with.jpg',
+                                descriptionCard: 'grilled beef steak meat with',
                                 price: '\$4,99'),
-                            CardFood(
-                                idCategory: 1,
+                            CardFood(context,
+                                idCategory: 7,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
-                                descriptionCard:
-                                    'Classic ramen with chicken and egg',
+                                    'https://static6.depositphotos.com/1062035/614/i/600/depositphotos_6147091-stock-photo-duck-fillet.jpg',
+                                descriptionCard: 'duck fillet',
                                 price: '\$4,99'),
-                            CardFood(
-                                idCategory: 1,
+                            CardFood(context,
+                                idCategory: 8,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
-                                descriptionCard:
-                                    'Classic ramen with chicken and egg',
+                                    'https://static8.depositphotos.com/1005629/806/i/600/depositphotos_8067583-stock-photo-vegetarian-pizza.jpg',
+                                descriptionCard: 'vegetarian pizza',
                                 price: '\$4,99'),
-                            CardFood(
-                                idCategory: 1,
+                            CardFood(context,
+                                idCategory: 9,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
+                                    'https://static8.depositphotos.com/1328914/862/i/600/depositphotos_8628006-stock-photo-spaghetti-with-basil-garnish-in.jpg',
                                 descriptionCard:
-                                    'Classic ramen with chicken and egg',
+                                    'spaghetti with basil garnish in',
                                 price: '\$4,99'),
-                            CardFood(
-                                idCategory: 1,
+                            CardFood(context,
+                                idCategory: 10,
                                 urlImage:
-                                    'https://st3.depositphotos.com/14670260/18915/i/600/depositphotos_189155102-stock-photo-candies-with-jelly-and-sugar.jpg',
-                                descriptionCard:
-                                    'Classic ramen with chicken and egg',
+                                    'https://st.depositphotos.com/1158226/2353/i/600/depositphotos_23531407-stock-photo-closeup-of-kebab-in-a.jpg',
+                                descriptionCard: 'closeup of kebab in a',
                                 price: '\$4,99'),
                           ],
                         )
@@ -252,7 +299,7 @@ class DraggableScrollableFood extends StatelessWidget {
             ));
   }
 
-  Widget CardFood(
+  Widget CardFood(BuildContext context,
       {required int idCategory,
       required String urlImage,
       required String descriptionCard,
@@ -261,26 +308,40 @@ class DraggableScrollableFood extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        GestureDetector(
-            onTap: (() {
-              /* controller.viewDetailFood(idCategory, urlImage, cookingTime,
-                          titleCard, descriptionCard); */
-            }),
-            child: GestureDetector(
-                //onTap: () => ,
-                child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25.0),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+              padding: const EdgeInsets.all(0.0),
+              elevation: 0.0 // Background color
               ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(25.0),
-                child: Image.network(
-                  urlImage,
-                  fit: BoxFit.fill,
-                  width: 370.0,
-                ),
+          onPressed: () {
+            showModalBottomSheet<void>(
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25.0),
+                    topRight: Radius.circular(25.0)),
               ),
-            ))),
+              elevation: 10.0,
+              context: context,
+              builder: (BuildContext context) {
+                return SelectedFood(urlImage, context);
+              },
+            );
+          },
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25.0),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(25.0),
+              child: Image.network(
+                urlImage,
+                fit: BoxFit.fill,
+                width: 370.0,
+              ),
+            ),
+          ),
+        ),
         Container(
           margin: const EdgeInsets.only(left: 10.0, top: 1.0),
           child: Column(
@@ -317,5 +378,146 @@ class DraggableScrollableFood extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  Widget SelectedFood(String urlImage, BuildContext context) {
+    return GetBuilder<DetailFoodController>(
+        builder: (controller) => Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      width: 40,
+                      color: backgroundColor,
+                      height: 2.0,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 5),
+                Container(
+                  width: double.infinity,
+                  height: 210.0,
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(25.0),
+                          topRight: Radius.circular(25.0)),
+                      image: DecorationImage(
+                          image: NetworkImage(urlImage), fit: BoxFit.cover)),
+                ),
+                const Padding(
+                  padding:
+                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
+                  child: Text(
+                    'Wheat noodles served in a meat-based broth, flavored with soy sauce and toppings (sliced pork, nori, menma and scallions)',
+                    style:
+                        TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    'Nutritional value per plate',
+                    style:
+                        TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: const [
+                        Text('380'),
+                        Text('kcal'),
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Text('13.1'),
+                        Text('proteins'),
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Text('20.2'),
+                        Text('fats'),
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Text('35.6'),
+                        Text('carbs'),
+                      ],
+                    )
+                  ],
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(right: 50.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                  color: const Color.fromRGBO(234, 234, 234, 1),
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              margin: const EdgeInsets.only(right: 20.0),
+                              padding: const EdgeInsets.all(15.0),
+                              child: const Icon(
+                                Icons.add,
+                                size: 30.0,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 20.0,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                  color: const Color.fromRGBO(234, 234, 234, 1),
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              padding: const EdgeInsets.all(15.0),
+                              child: const Icon(
+                                Icons.remove,
+                                size: 30.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                          onTap: () => Navigator.pop(context),
+                          child: Container(
+                            margin: const EdgeInsets.only(right: 10.0),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25.0),
+                                color: backgroundColor),
+                            child: Padding(
+                              padding: const EdgeInsets.all(20.0),
+                              child: Row(
+                                children: const [
+                                  Text(
+                                    'Add to cart',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  SizedBox(
+                                    width: 20.0,
+                                  ),
+                                  Text(
+                                    '\$4,99',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ))
+                    ],
+                  ),
+                )
+              ],
+            ));
   }
 }

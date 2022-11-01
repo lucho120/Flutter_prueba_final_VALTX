@@ -91,6 +91,7 @@ class _CardsFoodState extends State<CardsFood> {
           width: 380.0,
           height: 245.0,
           child: ListView(
+            shrinkWrap: true,
             controller: _scrollController,
             scrollDirection: Axis.horizontal,
             children: [

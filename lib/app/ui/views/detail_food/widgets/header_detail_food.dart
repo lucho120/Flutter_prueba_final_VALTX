@@ -1,6 +1,7 @@
-import 'package:app_prueba_final_valtx/app/ui/views/detail_food/detail_food_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'package:app_prueba_final_valtx/app/ui/views/detail_food/detail_food_controller.dart';
 
 class HeaderDetailFood extends StatelessWidget {
   const HeaderDetailFood({Key? key}) : super(key: key);

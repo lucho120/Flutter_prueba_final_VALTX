@@ -1,6 +1,27 @@
-# test
+# APP PRACTICA FINAL VALTX
 
-A new Flutter project.
+Replicación de 2 vistas de una app de comidas
+## About me
+
+Hello my name is Luis Angel Cortez Palacios, lover of mobile programming and starting in Flutter.
+
+# UI HOME FOOD
+
+![Image text](https://github.com/lucho120/Flutter_prueba_final_VALTX/blob/main/assets/screens/home.png)
+
+# UI DETAIL CATEGORY FOOD FOOD
+
+![Image text](https://github.com/lucho120/Flutter_prueba_final_VALTX/blob/main/assets/screens/detail_category_food.png)
+
+
+# UI LIST OF FOODS
+
+![Image text](https://github.com/lucho120/Flutter_prueba_final_VALTX/blob/main/assets/screens/list_foods.png)
+
+# UI FOOD SELECTED
+
+![Image text](https://github.com/lucho120/Flutter_prueba_final_VALTX/blob/main/assets/screens/food_select.png)
+
 
 ## Getting Started
 

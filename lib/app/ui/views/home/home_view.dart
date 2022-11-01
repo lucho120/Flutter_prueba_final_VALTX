@@ -10,6 +10,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           margin: const EdgeInsets.only(top: 25.0),
           padding: const EdgeInsets.all(5.0),
