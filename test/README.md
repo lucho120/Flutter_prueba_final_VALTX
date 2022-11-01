@@ -2,14 +2,27 @@
 
 Replicación de 2 vistas de una app de comidas
 ## About me
+
 Hello my name is Luis Angel Cortez Palacios, lover of mobile programming and starting in Flutter.
 
-# UI SCREENS FINANCE HOME
+# UI HOME FOOD
 
-![Image text](https://github.com/lucho120/Flutter_Reto2_VALTX/blob/main/assets/ui_screens/ui_home.png)
-            
-# UI SCREENS FINANCE CARDS
-![Image text](https://github.com/lucho120/Flutter_Reto2_VALTX/blob/main/assets/ui_screens/ui_cards.png)
+![Image text](https://github.com/lucho120/Flutter_prueba_final_VALTX/blob/main/assets/screens/home.png)
+
+# UI DETAIL CATEGORY FOOD FOOD
+
+![Image text](https://github.com/lucho120/Flutter_prueba_final_VALTX/blob/main/assets/screens/detail_category_food.png)
+
+
+# UI LIST OF FOODS
+
+![Image text](https://github.com/lucho120/Flutter_prueba_final_VALTX/blob/main/assets/screens/list_foods.png)
+
+# UI FOOD SELECTED
+
+![Image text](https://github.com/lucho120/Flutter_prueba_final_VALTX/blob/main/assets/screens/food_select.png)
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
