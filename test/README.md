@@ -1,4 +1,4 @@
-# APP PRACTICA FINAL VALTX
+# app_prueba_final_valtx
 
 Replicación de 2 vistas de una app de comidas
 ## About me
