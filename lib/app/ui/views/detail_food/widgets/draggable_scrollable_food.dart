@@ -1,3 +1,4 @@
+import 'package:app_prueba_final_valtx/app/ui/components/custom_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -316,12 +317,13 @@ class DraggableScrollableFood extends StatelessWidget {
               ),
           onPressed: () {
             showModalBottomSheet<void>(
+              isScrollControlled: true,
+              backgroundColor: Colors.transparent,
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(25.0),
                     topRight: Radius.circular(25.0)),
               ),
-              elevation: 10.0,
               context: context,
               builder: (BuildContext context) {
                 return SelectedFood(urlImage, context);
@@ -381,49 +383,59 @@ class DraggableScrollableFood extends StatelessWidget {
   }
 
   Widget SelectedFood(String urlImage, BuildContext context) {
-    return GetBuilder<DetailFoodController>(
-        builder: (controller) => Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Container(
-                      width: 40,
-                      color: backgroundColor,
-                      height: 2.0,
-                    ),
-                  ),
+    return SizedBox(
+      width: double.infinity,
+      height: 470.0,
+      child: Stack(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              SizedBox(
+                height: 10.0,
+                child: Icon(
+                  CustomIcons.noun_food_2235482,
+                  color: Colors.white,
+                  size: 65.0,
                 ),
-                const SizedBox(height: 5),
-                Container(
-                  width: double.infinity,
-                  height: 210.0,
-                  decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(25.0),
-                          topRight: Radius.circular(25.0)),
-                      image: DecorationImage(
-                          image: NetworkImage(urlImage), fit: BoxFit.cover)),
+              )
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 62.0),
+              Container(
+                width: double.infinity,
+                height: 170.0,
+                decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(25.0),
+                        topRight: Radius.circular(25.0)),
+                    image: DecorationImage(
+                        image: NetworkImage(urlImage), fit: BoxFit.cover)),
+              ),
+              Container(
+                color: Colors.white,
+                padding: const EdgeInsets.symmetric(
+                    vertical: 20.0, horizontal: 10.0),
+                child: const Text(
+                  'Wheat noodles served in a meat-based broth, flavored with soy sauce and toppings (sliced pork, nori, menma and scallions)',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0),
                 ),
-                const Padding(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
-                  child: Text(
-                    'Wheat noodles served in a meat-based broth, flavored with soy sauce and toppings (sliced pork, nori, menma and scallions)',
-                    style:
-                        TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0),
-                  ),
+              ),
+              Container(
+                width: double.infinity,
+                color: Colors.white,
+                padding: const EdgeInsets.all(10.0),
+                child: const Text(
+                  'Nutritional value per plate',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0),
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text(
-                    'Nutritional value per plate',
-                    style:
-                        TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0),
-                  ),
-                ),
-                Row(
+              ),
+              Container(
+                color: Colors.white,
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Column(
@@ -452,72 +464,77 @@ class DraggableScrollableFood extends StatelessWidget {
                     )
                   ],
                 ),
-                Container(
-                  margin: const EdgeInsets.only(top: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(right: 50.0),
-                        child: Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: const Color.fromRGBO(234, 234, 234, 1),
-                                  borderRadius: BorderRadius.circular(30.0)),
-                              margin: const EdgeInsets.only(right: 20.0),
-                              padding: const EdgeInsets.all(15.0),
-                              child: const Icon(
-                                Icons.add,
-                                size: 30.0,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 20.0,
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: const Color.fromRGBO(234, 234, 234, 1),
-                                  borderRadius: BorderRadius.circular(30.0)),
-                              padding: const EdgeInsets.all(15.0),
-                              child: const Icon(
-                                Icons.remove,
-                                size: 30.0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      GestureDetector(
-                          onTap: () => Navigator.pop(context),
-                          child: Container(
-                            margin: const EdgeInsets.only(right: 10.0),
+              ),
+              Container(
+                color: Colors.white,
+                padding: const EdgeInsets.only(top: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(right: 50.0),
+                      child: Row(
+                        children: [
+                          Container(
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25.0),
-                                color: backgroundColor),
-                            child: Padding(
-                              padding: const EdgeInsets.all(20.0),
-                              child: Row(
-                                children: const [
-                                  Text(
-                                    'Add to cart',
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    width: 20.0,
-                                  ),
-                                  Text(
-                                    '\$4,99',
-                                    style: TextStyle(color: Colors.white),
-                                  )
-                                ],
-                              ),
+                                color: const Color.fromRGBO(234, 234, 234, 1),
+                                borderRadius: BorderRadius.circular(30.0)),
+                            margin: const EdgeInsets.only(right: 20.0),
+                            padding: const EdgeInsets.all(15.0),
+                            child: const Icon(
+                              Icons.add,
+                              size: 30.0,
                             ),
-                          ))
-                    ],
-                  ),
-                )
-              ],
-            ));
+                          ),
+                          const SizedBox(
+                            width: 20.0,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: const Color.fromRGBO(234, 234, 234, 1),
+                                borderRadius: BorderRadius.circular(30.0)),
+                            padding: const EdgeInsets.all(15.0),
+                            child: const Icon(
+                              Icons.remove,
+                              size: 30.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    GestureDetector(
+                        onTap: () => Navigator.pop(context),
+                        child: Container(
+                          margin: const EdgeInsets.only(right: 10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25.0),
+                              color: backgroundColor),
+                          child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Row(
+                              children: const [
+                                Text(
+                                  'Add to cart',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                SizedBox(
+                                  width: 20.0,
+                                ),
+                                Text(
+                                  '\$4,99',
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
+                            ),
+                          ),
+                        ))
+                  ],
+                ),
+              )
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }

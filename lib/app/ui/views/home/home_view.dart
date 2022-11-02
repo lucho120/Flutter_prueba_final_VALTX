@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:app_prueba_final_valtx/app/ui/views/home/widgets/app_bottom_navigation.dart';
-import 'package:app_prueba_final_valtx/app/ui/views/home/widgets/cards_food.dart';
+import 'package:app_prueba_final_valtx/app/ui/views/home/widgets/categories_food.dart';
 import 'package:app_prueba_final_valtx/app/ui/views/home/widgets/header_home.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,7 +16,7 @@ class HomeView extends StatelessWidget {
           padding: const EdgeInsets.all(5.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [HeaderHome(), CardsFood()],
+            children: const [HeaderHome(), CategoriesFood()],
           ),
         ),
         bottomNavigationBar: const AppBottomNavigationView());

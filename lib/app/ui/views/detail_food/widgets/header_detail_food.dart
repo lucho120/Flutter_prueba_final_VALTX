@@ -1,3 +1,4 @@
+import 'package:app_prueba_final_valtx/app/ui/components/custom_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -51,7 +52,7 @@ class HeaderDetailFood extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),
                         child: Icon(
-                          Icons.more_horiz_outlined,
+                          CustomIcons.noun_more_1522747,
                           size: 25.0,
                           color: Colors.white,
                         ),

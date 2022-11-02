@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:app_prueba_final_valtx/app/ui/icons/custom_grid_menu_icons.dart';
+import 'package:app_prueba_final_valtx/app/ui/components/custom_assets.dart';
+import 'package:app_prueba_final_valtx/app/ui/components/custom_icons.dart';
 import 'package:app_prueba_final_valtx/core/theme/app_color.dart';
 
 class HeaderHome extends StatelessWidget {
@@ -35,7 +36,7 @@ class HeaderHome extends StatelessWidget {
                         color: backgroundColor,
                         borderRadius: BorderRadius.circular(30.0)),
                     child: const Icon(
-                      CustomGridMenu.grid_menu_shape_icon_193558,
+                      CustomIcons.grid_menu_shape_icon_193558__1_,
                       color: Color.fromRGBO(255, 255, 255, 1),
                       size: 40.0,
                     ),
@@ -57,12 +58,15 @@ class HeaderHome extends StatelessWidget {
                         color: backgroundColor,
                         fontSize: 19.0),
                   ),
-                  trailing: const SizedBox(
+                  trailing: SizedBox(
                     width: 60.0,
                     height: 60.0,
-                    child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/avatar.jpg')),
+                    child: ClipOval(
+                        child: FadeInImage.assetNetwork(
+                            fit: BoxFit.cover,
+                            placeholder: loading_image,
+                            image:
+                                'https://img.freepik.com/fotos-premium/retrato-hombre-joven-guapo_53876-38137.jpg')),
                   ),
                 ),
                 Container(

@@ -61,49 +61,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   fonts:
-    - family:  CustomHome
+    - family:  CustomIcons
       fonts:
-       - asset: fonts/CustomHome.ttf
-
-    - family:  CustomLayout
-      fonts:
-       - asset: fonts/CustomLayout.ttf
-
-    - family:  CustomShopping
-      fonts:
-       - asset: fonts/CustomShopping.ttf
-
-    - family:  CustomUser
-      fonts:
-       - asset: fonts/CustomUser.ttf
-
-    - family:  CustomGridMenu
-      fonts:
-       - asset: fonts/CustomGridMenu.ttf
-       
-    - family:  CustomSearch
-      fonts:
-       - asset: fonts/CustomSearch.ttf
-
-    - family:  CustomTacos
-      fonts:
-       - asset: fonts/CustomTacos.ttf
-
-    - family:  CustomHamburger
-      fonts:
-       - asset: fonts/CustomHamburger.ttf
-
-    - family:  CustomPizza
-      fonts:
-       - asset: fonts/CustomPizza.ttf
-
-    - family:  CustomSweet
-      fonts:
-       - asset: fonts/CustomSweet.ttf
-
-    - family:  CustomSoup
-      fonts:
-       - asset: fonts/CustomSoup.ttf
+       - asset: assets/fonts/CustomIcons.ttf    
    
   # To add assets to your application, add an assets section, like this:
   assets:
