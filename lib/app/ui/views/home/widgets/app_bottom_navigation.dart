@@ -1,3 +1,5 @@
+import 'package:app_prueba_final_valtx/core/utils/responsive.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 import 'package:app_prueba_final_valtx/app/ui/components/custom_icons.dart';
@@ -7,13 +9,14 @@ class AppBottomNavigationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Responsive responsive = Responsive.of(context);
     return Container(
-      height: 70.0,
+      height: responsive.hp(8.0),
       child: BottomNavigationBar(
         elevation: 0.0,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        iconSize: 30.0,
+        iconSize: responsive.hp(4.0),
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(

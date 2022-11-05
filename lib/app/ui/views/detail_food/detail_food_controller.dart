@@ -1,4 +1,5 @@
 import 'package:app_prueba_final_valtx/app/routes/app_routes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class DetailFoodController extends GetxController {
@@ -25,9 +26,11 @@ class DetailFoodController extends GetxController {
 
   RxInt idCategory = RxInt(0);
   RxString urlImage = RxString('');
+  RxString urlImageSelect = RxString('');
   RxString cookingTime = RxString("");
   RxString titleCard = RxString("");
   RxString descriptionCard = RxString("");
+  RxDouble opacity = RxDouble(0.1);
   //Functions
   void _initialize() {
     idCategory.value = Get.arguments['idCategory'];
@@ -40,5 +43,11 @@ class DetailFoodController extends GetxController {
 
   void backHome() {
     Get.offNamed(AppRoutes.HOME);
+  }
+
+  void backDetailFood(BuildContext context, String urlImage) {
+    urlImageSelect.value = urlImage;
+    opacity.value = 1.0;
+    Navigator.pop(context);
   }
 }

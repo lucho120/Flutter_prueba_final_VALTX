@@ -1,3 +1,4 @@
+import 'package:app_prueba_final_valtx/core/utils/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,13 +18,13 @@ class _ContentDetailFoodState extends State<ContentDetailFood> {
 
   @override
   Widget build(BuildContext context) {
+    final Responsive responsive = Responsive.of(context);
     return Scaffold(
       body: SafeArea(
         child: Stack(
           children: [
             Positioned.fill(
-                bottom: MediaQuery.of(context).size.height * 0.3,
-                child: const HeaderDetailFood()),
+                bottom: responsive.hp(30.0), child: const HeaderDetailFood()),
             Positioned.fill(
               child: NotificationListener<DraggableScrollableNotification>(
                   onNotification: (notification) {
@@ -41,7 +42,8 @@ class _ContentDetailFoodState extends State<ContentDetailFood> {
               top: -170 * (1 - _percent),
               child: Opacity(
                 opacity: _percent,
-                child: SizedBox(height: 100.0, child: AppBarDetailFood()),
+                child: SizedBox(
+                    height: 100.0, child: AppBarDetailFood(responsive)),
               ),
             ),
           ],
@@ -50,7 +52,7 @@ class _ContentDetailFoodState extends State<ContentDetailFood> {
     );
   }
 
-  Widget AppBarDetailFood() {
+  Widget AppBarDetailFood(Responsive responsive) {
     return GetBuilder<DetailFoodController>(
         builder: (controller) => AppBar(
               backgroundColor: Colors.white,
@@ -59,11 +61,11 @@ class _ContentDetailFoodState extends State<ContentDetailFood> {
                   onTap: () => controller.backHome(),
                   child: Container(
                     margin: const EdgeInsets.only(top: 20.0, left: 20.0),
-                    child: const Center(
+                    child: Center(
                       child: Icon(
                         Icons.arrow_back,
                         color: Colors.black,
-                        size: 30.0,
+                        size: responsive.hp(3.5),
                       ),
                     ),
                   )),
@@ -72,17 +74,20 @@ class _ContentDetailFoodState extends State<ContentDetailFood> {
                   margin: const EdgeInsets.only(top: 20.0, right: 30.0),
                   child: Text(
                     controller.titleCard.value,
-                    style: const TextStyle(color: Colors.black),
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: responsive.hp(4.0),
+                    ),
                   ),
                 ),
               ),
               actions: [
                 Container(
                   margin: const EdgeInsets.only(top: 20.0, right: 30.0),
-                  child: const Icon(
+                  child: Icon(
                     Icons.more_horiz_outlined,
                     color: Colors.black,
-                    size: 30.0,
+                    size: responsive.hp(3.5),
                   ),
                 ),
               ],
